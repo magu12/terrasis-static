@@ -1,0 +1,35 @@
+.kinds {
+    width: 100%;
+    margin-top: 190px;
+    &__items {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        img {
+            border-right: 100%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+    &__name {
+        margin-top: 15px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+    }
+}

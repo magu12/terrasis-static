@@ -1,0 +1,190 @@
+.page-main {
+    width: 100%;
+    padding-top: 40px;
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 55%;
+    }
+    &__text {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        span {
+            margin-bottom: 20px;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+            padding-left: 10px;
+            position: relative;
+            &::before {
+                content: "·";
+                font-size: 20px;
+                position: absolute;
+                left: 0;
+                top: -1px;
+            }
+        }
+        p {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+        }
+    }
+    .btn {
+        width: 360px;
+        margin-top: 80px;
+    }
+    &__img {
+        position: relative;
+        &-bg {
+            position: absolute;
+            border: 1px solid #b4b4b4;
+            width: 484px;
+            height: 484px;
+            border-radius: 100%;
+            top: -12%;
+            left: -9%;
+            z-index: -1;
+            animation: 12s linear infinite rotation;
+        }
+        .round {
+            position: absolute;
+            background: #dc0761;
+            border-radius: 100%;
+            top: 0;
+            transform: translate(50%, -50%);
+            &:nth-child(1) {
+                width: 24px;
+                height: 24px;
+                right: 50%;
+                z-index: 3;
+            }
+            &:nth-child(2) {
+                width: 17px;
+                height: 17px;
+                background: #fff;
+                border: 1px solid #dc0761;
+                right: 30%;
+                top: 4%;
+                animation: 2s linear infinite move;
+                z-index: 2;
+            }
+            &:nth-child(3) {
+                width: 24px;
+                height: 24px;
+                width: 10px;
+                height: 10px;
+                right: 10%;
+                top: 19.8%;
+                z-index: 1;
+                animation: 2s linear infinite move-two;
+            }
+        }
+        img {
+            width: 436px;
+            height: 436px;
+            object-fit: cover;
+            transform: scale(1);
+            animation: 15s linear infinite scaled;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-1080deg);
+    }
+}
+
+@keyframes move {
+    0% {
+        right: 30%;
+        top: 4%;
+    }
+    25% {
+        right: 40%;
+        top: 1%;
+    }
+    50% {
+        right: 51%;
+        top: -0.5%;
+    }
+    75% {
+        right: 40%;
+        top: 1%;
+    }
+    100% {
+        right: 30%;
+        top: 4%;
+    }
+}
+
+@keyframes scaled {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.07);
+    }
+    0% {
+        transform: scale(1);
+    }
+}
+
+@keyframes move-two {
+    0% {
+        right: 10%;
+        top: 19.8%;
+    }
+    15% {
+        right: 20%;
+        top: 10%;
+    }
+    28% {
+        right: 30%;
+        top: 4.2%;
+    }
+    36% {
+        right: 40%;
+        top: 1.2%;
+    }
+    48% {
+        right: 51%;
+        top: -0.5%;
+    }
+    60% {
+        right: 40%;
+        top: 1.2%;
+    }
+    72% {
+        right: 30%;
+        top: 4.2%;
+    }
+    85% {
+        right: 20%;
+        top: 10%;
+    }
+    100% {
+        right: 10%;
+        top: 19.8%;
+    }
+}

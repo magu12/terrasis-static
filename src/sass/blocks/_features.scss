@@ -1,0 +1,36 @@
+.features {
+    width: 100%;
+    margin-top: 190px;
+    &__content {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 450px;
+            object-fit: cover;
+        }
+    }
+    .page-main__text {
+        margin-top: 0;
+        font-weight: normal;
+        font-size: 20px;
+        span {
+            font-weight: normal;
+            font-size: 16px;
+        }
+    }
+    &__items {
+        width: 710px;
+    }
+    &__text {
+        margin-top: 60px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+        width: 650px;
+    }
+}

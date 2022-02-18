@@ -1,0 +1,304 @@
+.footer {
+    width: 100%;
+    padding: 70px 0;
+    background: #333333;
+
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 60px;
+        width: 360px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .cities__selected {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.5);
+
+        span {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+        }
+    }
+    .search {
+        position: relative;
+        &__result {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(-100%);
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            &.active {
+                max-height: 100vh;
+            }
+        }
+
+        &__product,
+        &__item {
+            border-bottom: 1px solid #E5E5E5;
+            padding: 20px 65px;
+            display: flex;
+            align-items: center;
+            height: 80px;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            img {
+                width: 40px;
+                height: 100%;
+                object-fit: contain;
+                margin-right: 28px;
+            }
+        }
+
+        &__name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #333333;
+        }
+
+        &__price {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #FD0000;
+        }
+
+        &__descr {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #B9B9BA;
+        }
+    }
+
+    input {
+        margin-left: 250px;
+        background: #4d4d4d;
+        border: none;
+        width: 361px;
+        height: 55px;
+        padding: 20px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__center {
+        display: flex;
+        margin-top: 45px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        height: 305px;
+        min-width: 839px;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        margin-bottom: 24px;
+        &:not([href]) {
+            color: #ffffff;
+            
+        &:hover {
+            color: #ffffff;
+        }
+
+        }
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+
+        div {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            text-align: left;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+        }
+    }
+
+    &__tels,
+    &__mails,
+    &__adress {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        a {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            text-align: left;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+        }
+
+        span {
+            margin-top: 10px;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #ffffff;
+            opacity: 0.5;
+        }
+    }
+
+    &__tels,
+    &__mails {
+        a {
+            margin-top: 7px;
+        }
+    }
+
+    &__mails,
+    &__adress {
+        margin-top: 40px;
+    }
+
+    &__tels,
+    &__mails,
+    &__adress {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -25px;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    &__tels {
+        &::before {
+            content: url("../img/phone.svg");
+        }
+    }
+
+    &__adress {
+        &::before {
+            top: -8px;
+            content: url("../img/adress.svg");
+        }
+    }
+
+    &__mails {
+        &::before {
+            top: -5 px;
+            content: url("../img/mail.svg");
+        }
+    }
+
+    &__bottom {
+        margin-top: 80px;
+        display: flex;
+
+        .footer__links {
+            padding-right: 10%;
+            height: 65px;
+            justify-content: space-between;
+        }
+    }
+
+    &__bot-link {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    &__smm-items {
+        width: 280px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__smm {
+        img {
+            width: 48px;
+            height: 48px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.07);
+            }
+        }
+    }
+
+    &__after {
+        margin-top: 60px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #b9b9ba;
+    }
+}

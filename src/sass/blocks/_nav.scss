@@ -1,0 +1,261 @@
+.nav {
+    padding-top: 65px;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    &__items {
+        width: 72%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        height: 50px;
+    }
+
+    &__main-link {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+        color: #000000;
+
+        &:hover {
+            color: #000000;
+        }
+    }
+
+    &__drop {
+        position: absolute;
+        padding: 0px 35px;
+        bottom: 20px;
+        z-index: -10;
+        transform: translateY(100%);
+        background: #f9f9f9;
+        border: 0px solid rgba(238, 238, 238, 0.9);
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.1s ease;
+
+        &__item {
+            margin-bottom: 20px;
+            min-width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &.w-840 {
+            width: 840px;
+        }
+
+        &.w-670 {
+            width: 670px;
+
+            .nav__drop__item {
+                width: 50%;
+            }
+        }
+
+        &.w-210 {
+            width: 210px;
+        }
+
+        &.w-240 {
+            width: 240px;
+        }
+    }
+
+    &__title-link {
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+
+        &:hover {
+
+            color: #333333;
+        }
+    }
+
+    &__drop-link {
+        margin-top: 15px;
+        margin-left: 7px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+
+        &:hover {
+
+            color: #333333;
+        }
+    }
+
+    &__select {
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: url("../img/black-arrow-down.svg");
+            position: absolute;
+            top: -1.5px;
+            right: -14px;
+        }
+
+        &:hover {
+            &::before {
+                transform: translateY(20%) rotate(-180deg);
+            }
+            .nav__drop {
+                max-height: 1000px;
+                opacity: 1;
+                z-index: 10;
+                bottom: 0px;
+                padding: 20px 35px;
+                border: 1px solid rgba(238, 238, 238, 0.9);
+            }
+        }
+    }
+
+    .search {
+        position: absolute;
+        right: 0;
+        width: 20px;
+        transition: all 0.15s ease;
+        z-index: 11;
+
+        input {
+            display: none;
+            width: 98%;
+            background: none;
+            border: none;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 120%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__trigger {
+            cursor: pointer;
+        }
+
+        &__close {
+            display: none;
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s;
+        }
+
+        &.active {
+            width: 100%;
+            padding: 13px 5%;
+            background: #f9f9f9;
+
+            input {
+                display: block;
+                width: 95%;
+            }
+
+            .search__trigger {
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .search__close {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        &__result {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(100%);
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            &.active {
+                max-height: 100vh;
+            }
+        }
+
+        &__product,
+        &__item {
+            border-bottom: 1px solid #E5E5E5;
+            padding: 20px 65px;
+            display: flex;
+            align-items: center;
+            height: 80px;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            img {
+                width: 40px;
+                height: 100%;
+                object-fit: contain;
+                margin-right: 28px;
+            }
+        }
+
+        &__name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #333333;
+        }
+
+        &__price {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #FD0000;
+        }
+
+        &__descr {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #B9B9BA;
+        }
+    }
+}

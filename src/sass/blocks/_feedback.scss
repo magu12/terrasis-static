@@ -1,0 +1,14 @@
+.feedback {
+    width: 100%;
+    margin-top: 190px;
+    &-swiper {
+        margin-top: 90px;
+    }
+    &__item {
+        img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+    }
+}

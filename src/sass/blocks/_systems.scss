@@ -1,0 +1,106 @@
+.systems {
+    width: 100%;
+    margin-top: 250px;
+    &__content {
+        margin-top: 60px;
+        border: 1px solid #b9b9ba;
+        border-top: none;
+    }
+    &__tabs {
+        display: flex;
+    }
+    &__tab {
+        cursor: pointer;
+        width: 200px;
+        height: 125px;
+        border: 1px solid #b9b9ba;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 45px 0 34px 0;
+        border-right: none;
+        transition: all 0.15s ease;
+        &:nth-child(1) {
+            border-left: none;
+        }
+        &.active {
+            border-top: 7px solid #dc0760;
+            padding-top: 38px;
+        }
+        &:hover {
+            border-top: 2px solid #dc0760;
+            padding-top: 43px;
+        }
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+        color: #333333;
+        text-align: center;
+    }
+    &__country {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #707070;
+    }
+    &__items {
+        overflow: hidden;
+        height: 550px;
+        width: 100%;
+        display: flex;
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        padding: 90px 0px;
+        transition: all 0.6s ease;
+        transform: translateX(-100%) scale(0.4);
+        opacity: 0;
+        max-width: 0;
+        img {
+            width: 275px;
+            height: 357px;
+            object-fit: cover;
+            object-position: top;
+        }
+        &.active {
+            transform: translateX(0%) scale(1);
+            opacity: 1;
+            max-width: 1300px;
+            padding: 90px 150px;
+        }
+    }
+    &__info {
+        margin-left: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .systems__name {
+            font-size: 20px;
+            text-align: left;
+        }
+        .systems__country {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    }
+    &__descr {
+        margin-top: 30px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+        min-width: 485px;
+    }
+    .btn {
+        margin-top: 48px;
+        width: 240px;
+        height: 45px;
+        font-size: 16px;
+    }
+}

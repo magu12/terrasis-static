@@ -1,0 +1,46 @@
+.bread-crumbs {
+    width: 100%;
+
+    .wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__links {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #707070;
+
+        &::after {
+            content: url(../img/arrow-bread.svg);
+            margin: 0px 10px;
+        }
+
+        &:hover {
+            color: #707070;
+        }
+
+        &:not([href]) {
+            color: #707070;
+
+            &:hover {
+                color: #707070;
+            }
+
+        }
+    }
+
+    &__page {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: rgba(220, 7, 97, 0.67);
+    }
+}

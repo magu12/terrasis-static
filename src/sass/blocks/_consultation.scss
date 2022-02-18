@@ -1,0 +1,36 @@
+.consultation {
+    width: 100%;
+    margin-top: 190px;
+    background: rgba(238, 238, 238, 0.9);
+    padding: 60px 0;
+    h3.descr {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+        margin-top: 28px;
+    }
+    form {
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+        input {
+            padding: 0 20px;
+            width: 360px;
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+        }
+        .btn {
+            width: 360px;
+        }
+    }
+}

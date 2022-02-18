@@ -1,0 +1,13 @@
+.example {
+    width: 100%;
+    margin-top: 190px;
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 570px;
+            height: 385px;
+            object-fit: cover;
+        }
+    }
+}

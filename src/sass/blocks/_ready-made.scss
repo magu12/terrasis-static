@@ -1,0 +1,37 @@
+.ready-made {
+    width: 100%;
+    margin-top: 190px;
+    &__items {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    &__item {
+        margin-top: 6px;
+        width: 597px;
+        height: 300px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: attr(ready-made__name);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+            padding: 12px 18px;
+            background: #DC0761;
+            top: 35px;
+            left: 44px;
+            transition: all 0.5s ease;
+        }
+        &:hover {
+            &::before {
+                transform: scale(1.05);            }
+
+        }
+    }
+}

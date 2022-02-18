@@ -1,0 +1,42 @@
+.news {
+    margin-top: 50px;
+    &__date {
+        margin-top: 20px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #dc0761;
+    }
+    &__content {
+        margin-top: 20px;
+        img {
+            float: left;
+            width: 580px;
+            height: 425px;
+            object-fit: cover;
+            margin: 0 50px 100px 0;
+        }
+        p {
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+        }
+    }
+    .btn {
+        width: 360px;
+        height: 60px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 220px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

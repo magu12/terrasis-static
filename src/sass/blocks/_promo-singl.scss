@@ -1,0 +1,47 @@
+.promo-singl {
+    width: 100%;
+    margin-top: 50px;
+    &__text {
+        margin-top: 30px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        margin-top: 65px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__descr {
+        margin-top: 170px;
+        span {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+            margin-bottom: 60px;
+            display: block;
+        }
+        p {
+            margin-bottom: 40px;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+        }
+    }
+}

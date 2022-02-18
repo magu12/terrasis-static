@@ -1,0 +1,54 @@
+.job {
+    margin-top: 50px;
+    h1.title {
+        width: 100%;
+    }
+    h2.title {
+        font-size: 24px;
+    }
+    .faq {
+        margin-top: 90px;
+        &__sub-title {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+            margin: 50px 0;
+        }
+        &__item.active {
+            max-height: 2500px;
+        }
+    }
+    .faq__items {
+        margin-top: 0px;
+    }
+    &__contant {
+        margin-top: 110px;
+        p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+        }
+        span {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #333333;
+            margin-right: 25px;
+        }
+        a {
+            font-weight: 500;
+            color: #333333;
+        }
+    }
+}

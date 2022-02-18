@@ -1,0 +1,95 @@
+.recommend {
+    width: 100%;
+    margin-top: 190px;
+    &__item {
+        background: #ffffff;
+        border: 1px solid #eaeaea;
+        width: 780px;
+        padding: 55px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 30px;
+        .name {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #000000;
+        }
+        .char {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            p {
+                margin-bottom: 0;
+                font-family: Montserrat Alternates;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 120%;
+                letter-spacing: 0.03em;
+                color: #000000;
+            }
+        }
+        .descr {
+            margin-top: 40px;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #626262;
+            width: 340px;
+        }
+        .btn {
+            width: 240px;
+            height: 45px;
+            margin-top: 50px;
+        }
+    }
+    img {
+        width: 320px;
+        height: 415px;
+        object-fit: cover;
+    }
+    &__more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 0 50px;
+        width: 500px;
+        &__title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #333333;
+        }
+        img {
+            margin-top: 50px;
+            width: 228.17px;
+            height: 216.62px;
+        }
+        .btn {
+            margin-top: 60px;
+            width: 228px;
+            height: 45px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

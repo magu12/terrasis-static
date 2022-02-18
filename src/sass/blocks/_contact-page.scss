@@ -1,0 +1,44 @@
+.contact-page {
+    margin-top: 50px;
+    &__items {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__text,
+    &__sub-title {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+        margin-top: 15px;
+    }
+    &__sub-title {
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    a {
+        width: 338px;
+        &:hover {
+            color: #333333;
+        }
+    }
+    .btn {
+        margin-top: 60px;
+        width: 360px;
+    }
+}
+
+iframe {
+    margin-top: 160px;
+    margin-bottom: -200px;
+}

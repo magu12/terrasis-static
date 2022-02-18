@@ -1,0 +1,39 @@
+.team {
+    width: 100%;
+    margin-top: 190px;
+    &__items {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 564px;
+            height: 379px;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        margin-top: 30px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    &__post {
+        margin-top: 10px;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+    }
+}

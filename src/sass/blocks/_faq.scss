@@ -1,12 +1,14 @@
 .faq {
     width: 100%;
     margin-top: 190px;
+
     &__items {
         margin-top: 50px;
         width: 100%;
         display: flex;
         flex-direction: column;
     }
+
     &__item {
         margin-top: 40px;
         width: 100%;
@@ -14,10 +16,12 @@
         max-height: min-content;
         overflow: hidden;
         transition: all .4s ease-in-out;
+
         &.active {
             .faq__trigger::after {
-                transform: rotate(0deg);               
+                transform: rotate(0deg);
             }
+
             .faq__text {
                 position: relative;
                 max-height: 1500px;
@@ -25,6 +29,7 @@
             }
         }
     }
+
     &__trigger {
         cursor: pointer;
         width: 100%;
@@ -42,6 +47,7 @@
         min-height: 75px;
         display: flex;
         align-items: center;
+
         &::before,
         &::after {
             content: "";
@@ -53,16 +59,19 @@
             background: #dc0761;
             transition: all .6s ease;
         }
+
         &::after {
             transform: rotate(450deg);
         }
     }
+
     &__text {
         padding: 0px 35px;
         position: relative;
         max-height: 0px;
         transition: all 0.5s ease;
         overflow: hidden;
+
         p {
             margin-top: 25px;
             font-family: Montserrat Alternates;
@@ -71,6 +80,26 @@
             font-size: 16px;
             line-height: 20px;
             color: #333333;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 22px;
+        position: relative;
+        margin-top: 50px;
+        &:first-child {
+            margin-top: 20px;
+        }
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 10px;
+            height: 70px;
+            background: #DC0761;
         }
     }
 }

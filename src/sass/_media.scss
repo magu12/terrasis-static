@@ -3,6 +3,9 @@
 }
 
 @media (max-width: 1250px) {
+    .pre-header {
+        display: none;
+    }
     *:hover {
         pointer-events: painted;
     }

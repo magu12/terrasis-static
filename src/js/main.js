@@ -279,6 +279,11 @@ $(document).ready(function () {
     });
 
 
+    $('.consultation-gift__gift').on('click', function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        
+    });
+
 
 
 

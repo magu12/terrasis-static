@@ -34,3 +34,99 @@
         }
     }
 }
+
+.consultation-gift {
+    width: 100%;
+    margin-top: 190px;
+    background: rgba(238, 238, 238, 0.9);
+    padding: 60px 0;
+
+    h3.descr {
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #333333;
+        margin-top: 28px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__gifts {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 60px;
+
+        img {
+            width: 234px;
+            height: 164px;
+        }
+
+    }
+
+    &__gift {
+        margin-right: 40px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            width: 28px;
+            height: 28px;
+            background: #EEEEEE;
+            border: 1px solid #B9B9BA;
+        }
+
+        &::after {
+            content: url(../img/arrow.svg);
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        &.active {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__name {
+        font-size: 16px;
+        color: #333333;
+        margin-top: 15px;
+    }
+
+    form {
+        margin-top: 55px;
+
+        input {
+            padding: 0 20px;
+            width: 360px;
+            height: 50px;
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            font-family: Montserrat Alternates;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 360px;
+        }
+    }
+}

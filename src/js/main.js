@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('.cities__selected').html($('#city').attr('city'));
             $('.cookie-city').html($('#city').attr('city2'));
         } else {
-            $.cookie('city', 'Гродно', { path: '/', expires: 21 });            
+            $.cookie('city', 'Гродно', { path: '/', expires: 21 });
             $.cookie('city2', 'Гродно', { path: '/', expires: 21 });
         }
     }
@@ -45,7 +45,7 @@ $(document).ready(function () {
     })
 
     $('.cities__select').on('click', function () {
-        $.cookie('city', $(this).attr('attrCity'), { path: '/', expires: 21 });        
+        $.cookie('city', $(this).attr('attrCity'), { path: '/', expires: 21 });
         $.cookie('city2', $(this).attr('city2'), { path: '/', expires: 21 });
         $('.cities__selected').html($(this).attr('attrCity'));
         $('.cookie-city').html($(this).attr('city2'));
@@ -115,7 +115,7 @@ $(document).ready(function () {
 
     $('.modal-open').on('click', function (e) {
         e.preventDefault();
-        e.stopPropagation(); 
+        e.stopPropagation();
         $('.modal').addClass('active');
     });
 
@@ -149,6 +149,38 @@ $(document).ready(function () {
                     action: 'send_feedback',
                     name: $(this).closest('form').find('input').eq(0).val(),
                     phone: $(this).closest('form').find('input').eq(1).val(),
+                },
+                dataType: "json",
+                complete: function (data) {
+                    $('.send').removeClass('active');
+                    $('.modal').addClass('active');
+                    $('.success').addClass('active');
+                }
+            })
+        }
+    });
+
+    $('.consultation-gift .btn').on('click', function (e) {
+        e.preventDefault();
+        let k = 0;
+        $(this).closest('form').find('input').each(function () {
+            if ($(this).val() == '') {
+                k++;
+                $(this).addClass('error');
+            }
+        });
+        setTimeout(function () {
+            $('input').removeClass('error');
+        }, 2000);
+        if (k == 0) {
+            $.ajax({
+                url: '/wp-admin/admin-ajax.php',
+                type: "POST",
+                data: {
+                    action: 'send_feedback_gift',
+                    name: $(this).closest('form').find('input').eq(0).val(),
+                    phone: $(this).closest('form').find('input').eq(1).val(),
+                    gift: $('.consultation-gift__gift.active').find('.consultation-gift__name').html().trim()
                 },
                 dataType: "json",
                 complete: function (data) {
@@ -279,9 +311,9 @@ $(document).ready(function () {
     });
 
 
-    $('.consultation-gift__gift').on('click', function(){
+    $('.consultation-gift__gift').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active');
-        
+
     });
 
 
